@@ -42,15 +42,12 @@ hammer repository create --organization-id 3 \
    --mirror-on-sync "no"
 
 <h1> Create repositories </h1>
-
-
 <b>root@foreman Katello-hammer]# hammer organization list</b>
 ---|----------------------|----------------------|-------------|---------------------
 ID | TITLE                | NAME                 | DESCRIPTION | LABEL
 ---|----------------------|----------------------|-------------|---------------------
 1  | Default Organization | Default Organization |             | Default_Organization
 ---|----------------------|----------------------|-------------|---------------------
-
 
 [root@foreman Katello-hammer]# hammer organization list
 ---|----------------------|----------------------|-------------|---------------------
@@ -60,8 +57,6 @@ ID | TITLE                | NAME                 | DESCRIPTION | LABEL
 3  | operations           | operations           | operations  | operations
 ---|----------------------|----------------------|-------------|---------------------
 [root@foreman Katello-hammer]#
-
-
 <b>[root@foreman Katello-hammer]# hammer product create --organization-id 3 --name "CentOS 7 Linux x86_64" --description "Repository for CentOS 7 Linux"</b>
 Product created.
 [root@foreman Katello-hammer]#
@@ -76,11 +71,8 @@ Length: 1690 (1.7K)
 Saving to: ‘/etc/pki/rpm-gpg/import/RPM-GPG-KEY-CentOS-7’
 
 100%[==================================================================================================>] 1,690       --.-K/s   in 0.001s
-
 2022-02-06 11:43:52 (2.74 MB/s) - ‘/etc/pki/rpm-gpg/import/RPM-GPG-KEY-CentOS-7’ saved [1690/1690]
-
 [root@foreman Katello-hammer]#
-
 
 [root@foreman Katello-hammer]# ll
 total 36
@@ -135,7 +127,6 @@ Repository created.
    --mirror-on-sync "no"
 [root@foreman rpm-gpg]#
 
-
 [root@foreman rpm-gpg]# cat updates-repo.sh
  hammer repository create --organization-id 3 \
    --product "CentOS 7 Linux x86_64" \
@@ -149,7 +140,6 @@ Repository created.
 [root@foreman rpm-gpg]# bash updates-repo.sh
 Repository created.
 [root@foreman rpm-gpg]#
-
 
 [root@foreman Katello-hammer]# cat Ansibe.sh
  hammer repository create --organization-id 3 \
@@ -165,7 +155,6 @@ Repository created.
 Repository created.
 [root@foreman Katello-hammer]#
 
-
 <b>[root@foreman Katello-hammer]#  hammer repository list --organization-id 3 --product "CentOS 7 Linux x86_64" </b>
 ---|-------------------------|-----------------------|--------------|-----------------------------------------------------------------------
 ID | NAME                    | PRODUCT               | CONTENT TYPE | URL
@@ -176,8 +165,4 @@ ID | NAME                    | PRODUCT               | CONTENT TYPE | URL
 3  | CentOS 7 Updates x86_64 | CentOS 7 Linux x86_64 | yum          | http://mirror.centos.org/centos-7/7/updates/x86_64/
 ---|-------------------------|-----------------------|--------------|-----------------------------------------------------------------------
 [root@foreman Katello-hammer]#
-
-
-
-
 </pre>
