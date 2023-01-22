@@ -40,7 +40,7 @@ hammer repository create --organization-id 3 \
    --gpg-key "RPM-GPG-KEY-CentOS-7" \
    --url "http://mirror.centos.org/centos-7/7/updates/x86_64/" \
    --mirror-on-sync "no"
-<h1> Create repositories </h1>
+<b> Create repositories commands </b>
 <b>root@foreman Katello-hammer]# hammer organization list
 ---|----------------------|----------------------|-------------|---------------------
 ID | TITLE                | NAME                 | DESCRIPTION | LABEL
