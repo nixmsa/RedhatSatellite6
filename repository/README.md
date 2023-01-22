@@ -40,9 +40,8 @@ hammer repository create --organization-id 3 \
    --gpg-key "RPM-GPG-KEY-CentOS-7" \
    --url "http://mirror.centos.org/centos-7/7/updates/x86_64/" \
    --mirror-on-sync "no"
-
 <h1> Create repositories </h1>
-<b>root@foreman Katello-hammer]# hammer organization list</b>
+<b>root@foreman Katello-hammer]# hammer organization list
 ---|----------------------|----------------------|-------------|---------------------
 ID | TITLE                | NAME                 | DESCRIPTION | LABEL
 ---|----------------------|----------------------|-------------|---------------------
@@ -54,7 +53,7 @@ ID | TITLE                | NAME                 | DESCRIPTION | LABEL
 ---|----------------------|----------------------|-------------|---------------------
 1  | Default Organization | Default Organization |             | Default_Organization
 3  | operations           | operations           | operations  | operations
----|----------------------|----------------------|-------------|---------------------
+---|----------------------|----------------------|-------------|---------------------</b>
 [root@foreman Katello-hammer]#
 <b>[root@foreman Katello-hammer]# hammer product create --organization-id 3 --name "CentOS 7 Linux x86_64" --description "Repository for CentOS 7 Linux"</b>
 Product created.
@@ -146,7 +145,7 @@ Repository created.
 [root@foreman Katello-hammer]# bash Ansibe.sh
 Repository created.
 [root@foreman Katello-hammer]#
-<b>[root@foreman Katello-hammer]#  hammer repository list --organization-id 3 --product "CentOS 7 Linux x86_64" </b>
+<b>[root@foreman Katello-hammer]#  hammer repository list --organization-id 3 --product "CentOS 7 Linux x86_64"
 ---|-------------------------|-----------------------|--------------|-----------------------------------------------------------------------
 ID | NAME                    | PRODUCT               | CONTENT TYPE | URL
 ---|-------------------------|-----------------------|--------------|-----------------------------------------------------------------------
@@ -155,5 +154,5 @@ ID | NAME                    | PRODUCT               | CONTENT TYPE | URL
 1  | CentOS 7 OS x86_64      | CentOS 7 Linux x86_64 | yum          | http://mirror.centos.org/centos-7/7/os/x86_64/
 3  | CentOS 7 Updates x86_64 | CentOS 7 Linux x86_64 | yum          | http://mirror.centos.org/centos-7/7/updates/x86_64/
 ---|-------------------------|-----------------------|--------------|-----------------------------------------------------------------------
-[root@foreman Katello-hammer]#
+[root@foreman Katello-hammer]#</b>
 </pre>
