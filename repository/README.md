@@ -1,6 +1,3 @@
-# RedhatSatellite6
-
-
 <h1> Create Repository </h1>
 <b> Ansible repo </b>
 <pre>
@@ -27,7 +24,7 @@ hammer repository create --organization-id 3 \
    --url "http://mirror.centos.org/centos-7/7/os/x86_64/" \
    --mirror-on-sync "no"
 
-<b> Centos 7 Extra repo
+<b> Centos 7 Extra repo </b>
 hammer repository create --organization-id 3 \
    --product "CentOS 7 Linux x86_64" \
    --name "CentOS 7 Extra x86_64" \
